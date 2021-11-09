@@ -11,8 +11,7 @@ static char	*go_next_line(char *file)
 	{
 		temp = ft_substr(file, stop_newline(file) + 1, ft_strlen(file));
 		free(file);
-		file = ft_strdup(temp);
-		free(temp);
+		file = temp;
 	}
 	else
 		file = NULL;
@@ -30,7 +29,7 @@ char	*get_line(char *file)
 	return (line);
 }
 
-static char	*get_thisline(char *buff, char *file)
+static char	*get_thisbuff(char *buff, char *file)
 {
 	char	*temp;
 
@@ -38,13 +37,10 @@ static char	*get_thisline(char *buff, char *file)
 	{
 		temp = ft_strjoin(file, buff);
 		free(file);
-		file = ft_strdup(temp);
-		free(temp);
+		file = temp;
 	}
 	else
 		file = ft_strdup(buff);
-	if (file == NULL)
-		free(file);
 	return (file);
 }
 
@@ -63,7 +59,7 @@ static char	*get_file(char *file, int fd)
 		if (ret == -1)
 			return (NULL);
 		buff[ret] = '\0';
-		file = get_thisline(buff, file);
+		file = get_thisbuff(buff, file);
 		if (file == NULL)
 			return (NULL);
 	}
