@@ -46,4 +46,4 @@ In addition to implementing the get_next_line function, the project has a few re
 
 # What I learned
 
-Get_next_line is an important assignment that help me understand how to read and manipulate file descriptors. It also teached me a lot about memory allocations and error handling.
+Get_next_line is a critical assignment that taught me how to read and manipulate file descriptors. It also taught me a great deal about memory allocation and error handling.
