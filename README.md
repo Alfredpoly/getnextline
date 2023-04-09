@@ -12,15 +12,15 @@ The function returns the line that has been read.
 
 To use get_next_line, you need to include the get_next_line.h header file in your C code. Then, you can call the get_next_line function as follows:
 
-'''
+```
 static char     *get_next_line(int fd);
-'''
+```
 
 The fd parameter is the file descriptor to read from.
 
 Here's an example of how you could use get_next_line to read lines from a file:
 
-'''
+```
 int main(void)
 {
     int fd;
@@ -33,7 +33,7 @@ int main(void)
     close(fd);
     return (0);
 }
-'''
+```
 
 # Project Requirements
 
